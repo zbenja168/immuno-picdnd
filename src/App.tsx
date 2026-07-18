@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { BrandBadge, BrandCard, LogoMark } from './components/Brand'
 
-type Item = { id: string; imageRef: string; label: string; category: string; brick?: string; explanation?: string }
+type Item = { id: string; imageRef: string; label: string; category: string; brick?: string; explanation?: string; order?: number }
 
 const BASE = import.meta.env.BASE_URL
 const ROUND_SIZE = 5
@@ -41,7 +41,9 @@ export default function App() {
     if (!items) return []
     const g: Record<string, Item[]> = {}
     for (const it of items) (g[it.brick || 'Other'] ||= []).push(it)
-    return Object.keys(g).sort((a, b) => a.localeCompare(b)).map((name) => ({ name, items: g[name] }))
+    return Object.keys(g)
+      .map((name) => ({ name, items: g[name], order: Math.min(...g[name].map((x) => x.order ?? 1e9)) }))
+      .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name))
   }, [items])
 
   const rounds = useMemo(() => {

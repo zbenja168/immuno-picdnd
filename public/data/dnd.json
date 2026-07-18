@@ -5,6 +5,7 @@
     "label": "Contact dermatitis",
     "category": "Hypersensitivity",
     "brick": "Hypersensitivity Reactions",
+    "order": 12,
     "explanation": "Allergic contact dermatitis (e.g., poison ivy) is a type IV reaction: sensitized CD4+ T cells recognize hapten-modified self-proteins and release cytokines that produce the characteristic linear vesicular rash 48-72 hours after exposure."
   },
   {
@@ -13,6 +14,7 @@
     "label": "Wheal and flare",
     "category": "Type I hypersensitivity",
     "brick": "Hypersensitivity Reactions",
+    "order": 12,
     "explanation": "The immediate wheal (edema from vascular leak) and flare (vasodilation) result from mast-cell degranulation and histamine release in a type I reaction. A late-phase reaction with eosinophils can follow hours later."
   },
   {
@@ -21,6 +23,7 @@
     "label": "Anaphylaxis",
     "category": "Type I hypersensitivity",
     "brick": "Allergic Diseases and Anaphylaxis",
+    "order": 13,
     "explanation": "Systemic mast-cell/basophil degranulation causes anaphylaxis, with airway edema, bronchospasm, and distributive shock from widespread vasodilation and vascular leak. It requires immediate epinephrine."
   },
   {
@@ -29,6 +32,7 @@
     "label": "Urticaria",
     "category": "Type I hypersensitivity",
     "brick": "Allergic Diseases and Anaphylaxis",
+    "order": 13,
     "explanation": "Urticaria consists of pruritic, edematous wheals caused by IgE-mediated mast-cell histamine release increasing dermal vascular permeability. Lesions are transient and blanch with pressure."
   },
   {
@@ -37,6 +41,7 @@
     "label": "Skin prick test",
     "category": "Allergy testing",
     "brick": "Allergic Diseases and Anaphylaxis",
+    "order": 13,
     "explanation": "Skin-prick testing detects allergen-specific IgE bound to cutaneous mast cells: a positive result is an immediate wheal-and-flare within ~15-20 minutes, characteristic of type I hypersensitivity. (Patch testing, read at 48-72 h, assesses type IV.)"
   },
   {
@@ -45,6 +50,7 @@
     "label": "Thymus",
     "category": "Immunodeficiency",
     "brick": "Inborn Errors of Adaptive Immunity",
+    "order": 14,
     "explanation": "The labeled structure is the thymus, the site of T-cell maturation. Failure of thymic development (e.g., DiGeorge/22q11.2 deletion) produces T-cell deficiency with susceptibility to viral, fungal, and opportunistic infections."
   },
   {
@@ -53,6 +59,7 @@
     "label": "ELISA",
     "category": "Laboratory techniques",
     "brick": "Diagnostic Laboratory Immunology",
+    "order": 17,
     "explanation": "ELISA uses an enzyme-linked antibody and a chromogenic substrate to quantify antigen or antibody. The enzyme converts substrate into a colored product whose intensity is proportional to the amount of target, read by a spectrophotometer."
   },
   {
@@ -61,6 +68,7 @@
     "label": "Herd immunity",
     "category": "Vaccines (herd immunity)",
     "brick": "Vaccines",
+    "order": 20,
     "explanation": "Herd (community) immunity occurs when a high proportion of a population is immune, reducing transmission so that susceptible individuals are indirectly protected. The threshold coverage needed rises with the pathogen's contagiousness."
   },
   {
@@ -69,6 +77,7 @@
     "label": "Dendritic cell",
     "category": "Cell identification",
     "brick": "Phagocyte Function",
+    "order": 3,
     "explanation": "Dendritic cells extend numerous membrane processes that increase surface area for antigen capture and presentation. They are the principal professional antigen-presenting cells that prime naive T lymphocytes."
   },
   {
@@ -77,6 +86,7 @@
     "label": "Dendritic cell",
     "category": "Cell identification",
     "brick": "Phagocyte Function",
+    "order": 3,
     "explanation": "The characteristic star-shaped morphology with many long processes marks a dendritic cell, the most effective professional antigen-presenting cell for activating naive T cells."
   },
   {
@@ -85,6 +95,7 @@
     "label": "Neutrophil",
     "category": "Cell identification",
     "brick": "Phagocyte Function",
+    "order": 3,
     "explanation": "Segmented neutrophils have a nucleus of 3-5 lobes joined by thin strands and neutral (pale) cytoplasmic granules. They are the most abundant circulating leukocyte and the first responders in acute bacterial infection."
   },
   {
@@ -93,6 +104,7 @@
     "label": "Angioedema",
     "category": "Complement disorders",
     "brick": "Complement System",
+    "order": 4,
     "explanation": "Hereditary angioedema results from C1-inhibitor deficiency, leading to unchecked bradykinin generation and episodic angioedema without urticaria. Because it is bradykinin-mediated (not histamine-mediated), antihistamines are ineffective and ACE inhibitors can precipitate attacks."
   },
   {
@@ -101,6 +113,7 @@
     "label": "IgM",
     "category": "Antibody structure",
     "brick": "Antigen Receptor Generation and Structure",
+    "order": 7,
     "explanation": "A pentamer of five monomers linked by a J chain is the classic structure of secreted IgM, giving it 10 potential antigen-binding sites and making it a highly efficient complement activator. IgM is the first antibody produced in a primary response. Secretory IgA is a dimer with a secretory component; IgG, IgE, and IgD circulate as monomers."
   },
   {
@@ -109,6 +122,7 @@
     "label": "Secretory IgA",
     "category": "Antibody structure",
     "brick": "Antigen Receptor Generation and Structure",
+    "order": 7,
     "explanation": "The figure shows secretory IgA: a dimer linked by a J chain and stabilized by the secretory component added as it is transcytosed across mucosal epithelium. Secretory IgA is the dominant antibody at mucosal surfaces and in breast milk, where it neutralizes pathogens and toxins. IgG dominates serum, IgE binds mast cells, and IgM/IgD are the main surface receptors on naive B cells."
   },
   {
@@ -117,6 +131,7 @@
     "label": "T-cell receptor",
     "category": "TCR structure",
     "brick": "Antigen Receptor Generation and Structure",
+    "order": 7,
     "explanation": "The two disulfide-linked chains each contain one variable and one constant immunoglobulin-like domain, identifying the alpha-beta T-cell receptor. The variable domains (Valpha/Vbeta) form the antigen-binding site that recognizes peptide presented on MHC. Unlike membrane immunoglobulin on B cells, the TCR is not secreted and recognizes only processed peptide-MHC, not soluble native antigen."
   }
 ]
