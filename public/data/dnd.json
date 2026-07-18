@@ -3,90 +3,105 @@
     "id": "imdnd-001",
     "imageRef": "imdnd-001_12_p22_1.png",
     "label": "Contact dermatitis",
-    "category": "Hypersensitivity"
+    "category": "Hypersensitivity",
+    "brick": "Hypersensitivity Reactions"
   },
   {
     "id": "imdnd-002",
     "imageRef": "imdnd-002_12_p8_1.png",
     "label": "Wheal and flare",
-    "category": "Type I hypersensitivity"
+    "category": "Type I hypersensitivity",
+    "brick": "Hypersensitivity Reactions"
   },
   {
     "id": "imdnd-003",
     "imageRef": "imdnd-003_13_p15_1.png",
     "label": "Anaphylaxis",
-    "category": "Type I hypersensitivity"
+    "category": "Type I hypersensitivity",
+    "brick": "Allergic Diseases and Anaphylaxis"
   },
   {
     "id": "imdnd-004",
     "imageRef": "imdnd-004_13_p4_1.png",
     "label": "Urticaria",
-    "category": "Type I hypersensitivity"
+    "category": "Type I hypersensitivity",
+    "brick": "Allergic Diseases and Anaphylaxis"
   },
   {
     "id": "imdnd-005",
     "imageRef": "imdnd-005_13_p8_1.png",
     "label": "Skin prick test",
-    "category": "Allergy testing"
+    "category": "Allergy testing",
+    "brick": "Allergic Diseases and Anaphylaxis"
   },
   {
     "id": "imdnd-006",
     "imageRef": "imdnd-006_14_p11_1.png",
     "label": "Thymus",
-    "category": "Immunodeficiency"
+    "category": "Immunodeficiency",
+    "brick": "Inborn Errors of Adaptive Immunity"
   },
   {
     "id": "imdnd-007",
     "imageRef": "imdnd-007_17_p7_1.png",
     "label": "ELISA",
-    "category": "Laboratory techniques"
+    "category": "Laboratory techniques",
+    "brick": "Diagnostic Laboratory Immunology"
   },
   {
     "id": "imdnd-008",
     "imageRef": "imdnd-008_20_p8_1.png",
     "label": "Herd immunity",
-    "category": "Vaccines (herd immunity)"
+    "category": "Vaccines (herd immunity)",
+    "brick": "Vaccines"
   },
   {
     "id": "imdnd-009",
     "imageRef": "imdnd-009_3_p13_1.png",
     "label": "Dendritic cell",
-    "category": "Cell identification"
+    "category": "Cell identification",
+    "brick": "Phagocyte Function"
   },
   {
     "id": "imdnd-010",
     "imageRef": "imdnd-010_3_p18_1.png",
     "label": "Dendritic cell",
-    "category": "Cell identification"
+    "category": "Cell identification",
+    "brick": "Phagocyte Function"
   },
   {
     "id": "imdnd-011",
     "imageRef": "imdnd-011_3_p25_1.png",
     "label": "Neutrophil",
-    "category": "Cell identification"
+    "category": "Cell identification",
+    "brick": "Phagocyte Function"
   },
   {
     "id": "imdnd-012",
     "imageRef": "imdnd-012_4_p17_1.png",
     "label": "Angioedema",
-    "category": "Complement disorders"
+    "category": "Complement disorders",
+    "brick": "Complement System"
   },
   {
     "id": "imdnd-013",
     "imageRef": "imdnd-013_7_p16_1.png",
     "label": "IgM",
-    "category": "Antibody structure"
+    "category": "Antibody structure",
+    "brick": "Antigen Receptor Generation and Structure"
   },
   {
     "id": "imdnd-014",
     "imageRef": "imdnd-014_7_p19_1.png",
     "label": "Secretory IgA",
-    "category": "Antibody structure"
+    "category": "Antibody structure",
+    "brick": "Antigen Receptor Generation and Structure"
   },
   {
     "id": "imdnd-015",
     "imageRef": "imdnd-015_7_p9_1.png",
     "label": "T-cell receptor",
-    "category": "TCR structure"
+    "category": "TCR structure",
+    "brick": "Antigen Receptor Generation and Structure"
   }
 ]
