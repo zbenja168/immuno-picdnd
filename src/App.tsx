@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { BrandBadge, BrandCard, LogoMark } from './components/Brand'
 
-type Item = { id: string; imageRef: string; label: string; category: string; brick?: string }
+type Item = { id: string; imageRef: string; label: string; category: string; brick?: string; explanation?: string }
 
 const BASE = import.meta.env.BASE_URL
 const ROUND_SIZE = 5
@@ -164,7 +164,10 @@ export default function App() {
             >
               <img src={`${BASE}data/images/${it.imageRef}`} alt="" className="aspect-square w-full bg-white object-contain" draggable={false} />
               {done && (
-                <div className="absolute inset-x-0 bottom-0 bg-teal-500/90 px-2 py-1 text-center text-sm font-semibold text-slate-900">{it.label}</div>
+                <div className="border-t border-teal-400/40 bg-teal-500/10 px-2.5 py-2">
+                  <div className="text-sm font-semibold text-teal-300">{it.label}</div>
+                  {it.explanation && <div className="mt-1 text-xs leading-snug text-slate-300">{it.explanation}</div>}
+                </div>
               )}
             </div>
           )
