@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useState } from 'react'
 import { BrandBadge, BrandCard, LogoMark } from './components/Brand'
 
-type Item = { id: string; imageRef: string; label: string; category: string; brick?: string; explanation?: string; order?: number }
+type Item = { id: string; imageRef: string; label: string; category: string; brick?: string; explanation?: string; order?: number; week?: number; weekName?: string; sessionName?: string }
 
 const BASE = import.meta.env.BASE_URL
 const ROUND_SIZE = 5
@@ -36,13 +36,15 @@ export default function App() {
       .catch(() => setErr('Could not load game data.'))
   }, [])
 
-  // bricks sorted by name, each with its items
+  // bricks in class order (each item's `order` is its brick's place in the
+  // course schedule), carrying the week/session they belong to for the menu
   const bricks = useMemo(() => {
     if (!items) return []
     const g: Record<string, Item[]> = {}
     for (const it of items) (g[it.brick || 'Other'] ||= []).push(it)
     return Object.keys(g)
-      .map((name) => ({ name, items: g[name], order: Math.min(...g[name].map((x) => x.order ?? 1e9)) }))
+      .map((name) => ({ name, items: g[name], order: Math.min(...g[name].map((x) => x.order ?? 1e9)),
+                        weekName: g[name][0].weekName, sessionName: g[name][0].sessionName }))
       .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name))
   }, [items])
 
@@ -100,7 +102,18 @@ export default function App() {
           <div className="mt-5 border-t border-slate-700 pt-4">
             <p className="mb-2 text-sm font-semibold text-slate-400">Or pick a brick ({bricks.length}):</p>
             <div className="grid gap-2 sm:grid-cols-2">
-              {bricks.map((b) => (
+              {bricks.map((b, i) => {
+                const prev = bricks[i - 1]
+                const newWeek = b.weekName && b.weekName !== prev?.weekName
+                const newSession = b.sessionName && (newWeek || b.sessionName !== prev?.sessionName)
+                return (
+                <Fragment key={b.name}>
+                {newWeek && (
+                  <div className={`sm:col-span-2 rounded-lg border border-sky-900/60 bg-sky-950/30 px-3 py-2 text-sm font-bold text-sky-300 ${i ? 'mt-3' : ''}`}>{b.weekName}</div>
+                )}
+                {newSession && (
+                  <div className="sm:col-span-2 px-1 pt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">{b.sessionName}</div>
+                )}
                 <button
                   key={b.name}
                   onClick={() => play(b.name)}
@@ -109,7 +122,9 @@ export default function App() {
                   <span className="truncate pr-2">{b.name}</span>
                   <span className="shrink-0 rounded-full bg-slate-700 px-2 py-0.5 text-xs text-slate-300">{b.items.length}</span>
                 </button>
-              ))}
+                </Fragment>
+                )
+              })}
             </div>
           </div>
         </div>
